@@ -8,8 +8,6 @@ import javax.sound.sampled.AudioSystem;
 import java.io.File;
 
 
-// Accessibility, Disability , Awareness (ADA)
-
 public class Ada {
     public static Font customFont1 = new Font("Comic Sans", Font.PLAIN, 20);
     public static void main(String[] args) {
@@ -19,17 +17,6 @@ public class Ada {
         frame.setSize(800, 500);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
-
-        // Play Ada Intro
-        try {
-            File adaIntro = new File("AdaIntro.wav");
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(adaIntro);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start();
-        } catch (Exception e) {
-            System.out.println("unable to play track");
-        }
 
         // Create Panel
         JPanel panel = new JPanel();
@@ -44,7 +31,7 @@ public class Ada {
         panel.add(imageLabel);
 
         // Intro text
-        JLabel introLabel = new JLabel("<html>Hi there! I am Ada, Your personal Mental Health ChatBot!<br><br><center>(Accessibility, Disability, Awareness (ADA))</center></html>");
+        JLabel introLabel = new JLabel("<html>Hi there! I am Ada, Your own personal Mental Health ChatBot!<br><br><center>(Accessibility, Disability, Awareness (ADA))</center></html>");
         introLabel.setForeground(Color.BLACK);
         introLabel.setFont(customFont1);
         panel.add(introLabel);
@@ -104,6 +91,17 @@ public class Ada {
         panel.add(sendButton);
         frame.setVisible(true);
 
+        // Play Ada Intro
+        try {
+            File adaIntro = new File("AdaIntro.wav");
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(adaIntro);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+        } catch (Exception A) {
+            System.out.println("unable to play track");
+        }
+
         sendButton.addActionListener(e -> {
                     frame.setVisible(false);
                     String word = userResponse.getText();
@@ -117,7 +115,6 @@ public class Ada {
                     responseFrame.setResizable(false);
                     responseFrame.setLocationRelativeTo(frame);
 
-
                     // Create Panel
                     JPanel responsePanel = new JPanel();
                     responsePanel.setBackground(new Color(237, 216, 180));
@@ -125,7 +122,7 @@ public class Ada {
                     responsePanel.add(imageLabel);
 
                     // Intro Text
-                    JLabel responseLabel = new JLabel("<html>I understand how you feel.<br> I am here to support you</html>");
+                    JLabel responseLabel = new JLabel("<html>I understand how you feel.<br> I am here to support you.</html>");
                     responseLabel.setForeground(Color.BLACK);
                     responseLabel.setFont(customFont1);
                     responsePanel.add(responseLabel);
@@ -144,7 +141,7 @@ public class Ada {
                     responsePanel.add(adaResponse);
 
                     // Yes Button
-                    JButton yesButton = new JButton(" Yes ");
+                    JButton yesButton = new JButton("Yes direct me to Mental Health Resources");
                     yesButton.setForeground(Color.BLACK);
                     yesButton.setOpaque(true);
                     yesButton.setFont(customFont1);
@@ -152,7 +149,7 @@ public class Ada {
                     responsePanel.add(yesButton);
 
                     // No Button
-                    JButton noButton = new JButton(" No  ");
+                    JButton noButton = new JButton("No I do not need Mental Health Resources");
                     noButton.setForeground(Color.BLACK);
                     noButton.setOpaque(true);
                     noButton.setFont(customFont1);
@@ -161,6 +158,17 @@ public class Ada {
 
                     // Make frame visible
                     responseFrame.setVisible(true);
+
+            // Play Ada Intro
+            try {
+                File adaIntro = new File("AdaSupport.wav");
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(adaIntro);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInputStream);
+                clip.start();
+            } catch (Exception B) {
+                System.out.println("unable to play track");
+            }
 
             yesButton.addActionListener(y -> {
                 try {
