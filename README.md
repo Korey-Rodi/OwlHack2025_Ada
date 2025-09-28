@@ -3,6 +3,14 @@ Hack for OwlHacks Fall 2025
 <br>
 ADA - Accessibility, Disability, Awareness
 
+# Screenshots
+<img width="912" height="612" alt="MainFrame" src="https://github.com/user-attachments/assets/4590cf5e-c3c6-4771-88c6-6c2d09245aa2" />
+
+<img width="912" height="612" alt="ResponseFrame" src="https://github.com/user-attachments/assets/f7a4dd88-8a99-4411-86e8-1cd0dd030145" />
+
+
+
+
 # Video Demo
 https://youtu.be/IqdLi-w9-o8
 
