@@ -103,61 +103,61 @@ public class Ada {
         }
 
         sendButton.addActionListener(e -> {
-                    frame.setVisible(false);
-                    String word = userResponse.getText();
-                    String word2 = userResponse2.getText();
-                    String word3 = userResponse3.getText();
+            frame.setVisible(false);
+            String word = userResponse.getText();
+            String word2 = userResponse2.getText();
+            String word3 = userResponse3.getText();
 
-                    // Create Frame
-                    JFrame responseFrame = new JFrame("ADA Personal Mental Health ChatBot");
-                    responseFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    responseFrame.setSize(800, 500);
-                    responseFrame.setResizable(false);
-                    responseFrame.setLocationRelativeTo(frame);
+            // Create Frame
+            JFrame responseFrame = new JFrame("ADA Personal Mental Health ChatBot");
+            responseFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            responseFrame.setSize(800, 500);
+            responseFrame.setResizable(false);
+            responseFrame.setLocationRelativeTo(frame);
 
-                    // Create Panel
-                    JPanel responsePanel = new JPanel();
-                    responsePanel.setBackground(new Color(237, 216, 180));
-                    responseFrame.add(responsePanel);
-                    responsePanel.add(imageLabel);
+            // Create Panel
+            JPanel responsePanel = new JPanel();
+            responsePanel.setBackground(new Color(237, 216, 180));
+            responseFrame.add(responsePanel);
+            responsePanel.add(imageLabel);
 
-                    // Intro Text
-                    JLabel responseLabel = new JLabel("<html>I understand how you feel.<br> I am here to support you.</html>");
-                    responseLabel.setForeground(Color.BLACK);
-                    responseLabel.setFont(customFont1);
-                    responsePanel.add(responseLabel);
+            // Intro Text
+            JLabel responseLabel = new JLabel("<html>I understand how you feel.<br> I am here to support you.</html>");
+            responseLabel.setForeground(Color.BLACK);
+            responseLabel.setFont(customFont1);
+            responsePanel.add(responseLabel);
 
-                    // Text Area
-                    JTextArea adaResponse = new JTextArea(5, 40);
-                    adaResponse.setLineWrap(true);
-                    adaResponse.setBackground(Color.WHITE);
-                    adaResponse.setForeground(Color.BLACK);
-                    adaResponse.setFont(customFont1);
-                    adaResponse.setBorder(lineBorder);
-                    adaResponse.setEditable(false);
-                    adaResponse.setText("You are feeling " + word + ". \nYou have been having these feelings for " + word2
-                            + ". \nYou responded \""  + word3
-                            + "\" to if these feelings are causing you trouble daily.\nDo you need me to direct you to mental health resources?");
-                    responsePanel.add(adaResponse);
+            // Text Area
+            JTextArea adaResponse = new JTextArea(5, 40);
+            adaResponse.setLineWrap(true);
+            adaResponse.setBackground(Color.WHITE);
+            adaResponse.setForeground(Color.BLACK);
+            adaResponse.setFont(customFont1);
+            adaResponse.setBorder(lineBorder);
+            adaResponse.setEditable(false);
+            adaResponse.setText("You are feeling " + word + ". \nYou have been having these feelings for " + word2
+                    + ". \nYou responded \"" + word3
+                    + "\" to if these feelings are causing you trouble daily.\nDo you need me to direct you to mental health resources?");
+            responsePanel.add(adaResponse);
 
-                    // Yes Button
-                    JButton yesButton = new JButton("Yes direct me to Mental Health Resources");
-                    yesButton.setForeground(Color.BLACK);
-                    yesButton.setOpaque(true);
-                    yesButton.setFont(customFont1);
-                    yesButton.setBorder(lineBorder);
-                    responsePanel.add(yesButton);
+            // Yes Button
+            JButton yesButton = new JButton("Yes direct me to Mental Health Resources");
+            yesButton.setForeground(Color.BLACK);
+            yesButton.setOpaque(true);
+            yesButton.setFont(customFont1);
+            yesButton.setBorder(lineBorder);
+            responsePanel.add(yesButton);
 
-                    // No Button
-                    JButton noButton = new JButton("No I do not need Mental Health Resources");
-                    noButton.setForeground(Color.BLACK);
-                    noButton.setOpaque(true);
-                    noButton.setFont(customFont1);
-                    noButton.setBorder(lineBorder);
-                    responsePanel.add(noButton);
+            // No Button
+            JButton noButton = new JButton("No I do not need Mental Health Resources");
+            noButton.setForeground(Color.BLACK);
+            noButton.setOpaque(true);
+            noButton.setFont(customFont1);
+            noButton.setBorder(lineBorder);
+            responsePanel.add(noButton);
 
-                    // Make frame visible
-                    responseFrame.setVisible(true);
+            // Make frame visible
+            responseFrame.setVisible(true);
 
             // Play Ada Intro
             try {
@@ -181,7 +181,6 @@ public class Ada {
             });
 
             noButton.addActionListener(n -> System.exit(0));
-
-            });
+        });
         }
     }
