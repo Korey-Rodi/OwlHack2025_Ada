@@ -4,6 +4,7 @@ Hack for OwlHacks Fall 2025
 ADA - Accessibility, Disability, Awareness
 
 # Video Demo
+https://youtu.be/IqdLi-w9-o8
 
 # What is it?
 My project is a mental health chatbot that uses a Java Swing GUI to prompt the user for responses and has a comforting bot named Ada reiterate their feelings and direct them to resources if needed. Ada asks the users 3 questions; In one word, describe how you are feeling , How long have these feelings persisted? , Have these feelings made day to day life difficult?. Ada than takes the responses and adds them to a text area, than prompts the user if they need additonal mental health resources. If the user selects yes they are taken to the CDC website for mental health, and if they select no the application closes.
