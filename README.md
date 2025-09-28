@@ -1,7 +1,7 @@
 # Ada Mental Health Chatbot
-
 Hack for OwlHacks Fall 2025
-(Accessibility, Disability, Awareness (ADA))
+<br>
+ADA - Accessibility, Disability, Awareness
 
 # Video Demo
 
